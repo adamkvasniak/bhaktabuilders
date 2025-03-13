@@ -103,11 +103,6 @@ const Statistic = () => {
           {inView && <h1><CountUp start={1} end={44} duration={2.5} delay={0.9} /> <FaHeart color='red'/></h1>}
         </div>
 
-      {/* <div className={styles.statisticItem}>
-        <p class={styles.itemDescription}>Unhappy customers</p>
-        {inView && <h1><CountUp start={0} end={0} duration={2.5} delay={0.9} /></h1>}
-        
-      </div> */}
     </div>
     <Testimonials />
   </section>

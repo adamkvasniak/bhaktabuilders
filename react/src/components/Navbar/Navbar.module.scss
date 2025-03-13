@@ -8,29 +8,19 @@
   margin-bottom: 0px;
   z-index: 10000;
   padding: 25px;
-  background: linear-gradient(90deg, #dedcdc , #333333 );
-  background-size: 200% 100%; /* Make the gradient larger for smooth movement */
-  background-position: 0 0;
-  transition: background-position 1s ease; /* Transition on position */
-  transition: all 0.2s ease-in-out;
+  background-color: transparent;//linear-gradient(90deg, #dedcdc , #333333 );
+  transition: background-color 0.4s ease-in-out, padding 0.4s ease-in-out, height 0.4s ease-in-out;
 
 &.shrink {
     height: 90px; // Shrinks when scrolled
     padding: 5px; // Less padding for a thinner navbar
+    background-color: #333333;
 }
 }
-/* Increase specificity */
-
-
-.aboutPageStyle {
-  background: none !important;
-}
-
-
 
 .logo {
   height: 60px; // Default logo size
-  transition: height 0.2s ease-in-out;
+  transition: height 0.6s ease-in-out;
 
   &.logoShrink {
       height: 50px; // Shrink logo when navbar shrinks

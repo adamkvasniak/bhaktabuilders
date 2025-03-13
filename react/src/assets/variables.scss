@@ -12,7 +12,7 @@ $font-size-small: 1rem;
 $font-size-normal: clamp(0.9rem, 1.1vw, 1.5rem);
 $font-size-large: clamp(2rem, 5vw, 5rem);
 
-$line-height: 1.2rem;
+$line-height: 1.7rem;
 
 // ServiceGrid
 $serviceCard-border: 1px solid #952319;
@@ -58,19 +58,17 @@ $radius-full: 50%;
   background-color: #952319;
   display: flex;
   align-items: center;
-  
   border: none;
   font-size: $button-font-size;
   font-weight: bold;
   padding: 15px 16px;
   border-radius: 25px;
   cursor: pointer;
-  
   transition: transform 0.2s ease, box-shadow 0.2s ease;  
 
 &:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 120, 255, 0.4);
+  box-shadow: 0 1px 1px $font-color;
   text-decoration: none;
   }
   @media (max-width:700px) {

@@ -30,7 +30,7 @@ app.post("/send-email", async (req, res) => {
     return res.status(400).json({ success: false, message: "Spam detected!" });
   }
 
-  console.log("✅ Valid form submission received:", { name, email });
+
 
   const mailOptions = {
     from: email,
@@ -41,7 +41,7 @@ app.post("/send-email", async (req, res) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    res.json({ success: true, message: "✅ Email sent successfully!" });
+    res.json({ success: true, message: "✅ Thank you for your response! We've received your message and will get back to you as soon as possible" });
   } catch (error) {
     console.error("❌ Email Sending Error:", error);
     res.status(500).json({ success: false, message: "Error sending email" });

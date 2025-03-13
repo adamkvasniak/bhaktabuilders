@@ -23,6 +23,11 @@ h1 {
   @include header-style;
   margin-bottom: 0px;
 }
+
+h2 {
+  @include sub-header;
+  margin-bottom: 2px;
+}
   
 p {
     @include normal-font;

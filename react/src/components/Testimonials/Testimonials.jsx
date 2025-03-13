@@ -21,7 +21,7 @@ const Testimonials = () => {
         
       </div>    
       <div className={styles.widgetDiv}>
-        {/* <ElfsightWidget widgetId='b9ae49bf-013a-4ce7-841b-efb5c1e46635' /> */}
+        <ElfsightWidget widgetId='b9ae49bf-013a-4ce7-841b-efb5c1e46635' />
         </div>
     </section>
   )
