@@ -1,0 +1,23 @@
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5050:5000"
+    env_file:
+      - .env
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+  frontend:
+    build: ./react
+    ports:
+      - "3000:80"
+    env_file:
+      - .env
+    volumes:
+      - ./react:/app
+      - /app/node_modules
+    depends_on:
+      - backend  # ✅ Frontend depends on backend, but backend doesn't depend on frontend

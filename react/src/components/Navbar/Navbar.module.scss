@@ -1,0 +1,190 @@
+@import '../../assets/variables.scss';
+
+.navigationHeaderDiv{
+  width:100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-bottom: 0px;
+  z-index: 10000;
+  padding: 25px;
+  background: linear-gradient(90deg, #dedcdc , #333333 );
+  background-size: 200% 100%; /* Make the gradient larger for smooth movement */
+  background-position: 0 0;
+  transition: background-position 1s ease; /* Transition on position */
+  transition: all 0.2s ease-in-out;
+
+&.shrink {
+    height: 90px; // Shrinks when scrolled
+    padding: 5px; // Less padding for a thinner navbar
+}
+}
+/* Increase specificity */
+
+
+.aboutPageStyle {
+  background: none !important;
+}
+
+
+
+.logo {
+  height: 60px; // Default logo size
+  transition: height 0.2s ease-in-out;
+
+  &.logoShrink {
+      height: 50px; // Shrink logo when navbar shrinks
+  }
+}
+ 
+
+.navigationHeaderDiv:hover{
+  background-position: 100% 0; /* Shift the gradient */
+}
+
+.navigationList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width:90vw;
+    padding-right: 10vw;
+    list-style: none;
+}
+
+.navbarNavLinks{
+  display: flex;
+  list-style: none;
+}
+
+.navigationList li:first-child {
+  margin-right: auto;
+}
+.navigationList li:not(:first-child) {
+  margin-left: 1.3rem; /* Add spacing between the grouped items if desired */
+}
+.link {
+  text-decoration: none;
+  color: $button-color;
+  font-weight: 550;
+  font-size: $font-size-normal;
+  transition: color 0.6s ease, font-size 0.3s ease, opacity 0.5s ease; /* Smooth transition for color and size */
+  opacity: 1; 
+}
+
+.activeLink {
+  color: #ffd700 ; // Highlight active page (Gold color)
+  text-decoration: none;
+  font-weight: 550;
+  font-size: $button-font-size;
+  transition: color 0.6s ease, font-size 0.3s ease, opacity 0.5s ease; /* Smooth transition for color and size */
+  opacity: 1; 
+  &:hover {
+    text-decoration: none;
+    font-size: 24px;
+  }
+}
+
+.link:hover {
+  text-decoration: none;
+  color: $button-background; /* Change text color */
+  font-size: 24px;
+}
+
+.image {
+  height: 100px;
+}
+
+.button {
+  @include button;
+  margin-left: 30px;
+}
+.menuButton {
+    display: none; /* Only show on mobile */
+}
+
+/* toggle Menu */
+.toggleContainer {
+  text-align: center;
+  display: none;
+  margin-right: 20px;
+}
+
+.toggleButton {
+  @include  button;
+  margin-left: 12px;
+  background-color: transparent;
+  margin-top: 0px;
+  color: $button-background;
+  font-size: 34px;
+  align-self: flex-end;
+ 
+}
+
+.popupMenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  background: transparent;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.open {
+  max-height: 200px;
+  
+}
+
+.popupMenu ul {
+  list-style: none;
+  top: 0;
+  padding: 10px;
+  margin-right:30px;
+}
+
+.popupMenu li {
+  
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.popupMenu li:last-child {
+  border-bottom: none;
+}
+  /* Mobile Styles */
+  @media (max-width: 720px) {
+   
+    .navigationHeaderDiv{
+      padding: 0px;
+    }
+    .shrink {
+      height: auto !important; // Prevent shrinking
+      padding: 2px !important; // Reset padding
+    }
+    .button {
+      position: absolute;
+      top: 92vh;
+      right: 7vw;
+      padding: 20px;
+    }
+
+    .navbarNavLinks {
+      display: none;
+      visibility: hidden;
+    }
+    .toggleContainer {
+      display: flex;
+      flex-direction: column;
+    }
+    .navigationList {
+      align-items: flex-start;
+      justify-content:space-between;
+      width: 88vw;
+    }
+    .navigationList li:not(:first-child) {
+      margin-left: 0; /* Add spacing between the grouped items if desired */
+    }
+    
+
+  }
+  

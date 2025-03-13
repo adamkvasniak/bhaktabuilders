@@ -1,0 +1,32 @@
+@import '../../assets/variables.scss';
+
+.contactCard {
+    @include normal-font;
+    background-color: $background-color;
+    font-size: $font-size-small;
+    text-align: left;
+    
+}
+
+.logo {
+  padding: 15px;
+  height: 90px;
+}
+   
+  .detail,
+  .address,
+  .contact,
+  .email {
+
+    line-height: 1.5;
+  }
+  
+  a {
+    color: $button-background;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

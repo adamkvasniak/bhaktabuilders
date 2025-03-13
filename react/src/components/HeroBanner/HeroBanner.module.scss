@@ -1,0 +1,135 @@
+@import '../../assets/variables.scss';
+
+.heroBanner {
+  position: relative;
+  width: 100%;
+  height: 38vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #2E2E2E 0%, #0A192F 100%);
+  margin-top: 140px;
+  
+}
+
+.heroImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%; /* Adjust width to control the split */
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%); /* Diagonal clipping */
+}
+.active {
+  opacity: 1;
+}
+
+.heroText {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 35%;
+  color: $font-color;
+  padding: 20px;
+  text-align: right;
+}
+
+.button {
+  @include button;
+}
+.buttonTransparent {
+  @include button;
+  background: transparent;
+  border: $button-background solid 1px;
+}
+.heroText h1{
+@include header-style;
+}
+.heroText p{
+  @include normal-font;
+  margin-bottom: 2vw;
+  line-height: $line-height;
+}
+.bhaktaCredit{
+  @include bhaktaCredit;
+}
+.buttonsDiv {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+
+@media (max-width: 970px) {
+  .heroBanner {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+    padding-top:5vh;
+  }
+
+  .heroText {
+    position: relative;
+    width: 70%;
+    padding: 30px;
+    right: unset;
+    top: unset;
+    transform: none;
+    text-align: left;
+  }
+
+  .buttonsDiv {
+    justify-content: flex-start;
+    margin-top: 19px;
+  }
+
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    height: 50vw; // Adjust height dynamically based on width
+    max-height: 400px; // Prevent excessive height
+    overflow: hidden; // Ensure only one image is visible
+  }
+
+  .heroImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    clip-path: none; // Remove diagonal clipping
+  }
+  .active {
+    opacity: 1;
+  }
+  .buttonsDiv {
+    align-self: flex-start;
+  }
+}
+@media (max-width: 720px) {
+  .heroBanner {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .heroText {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .buttonsDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+
+

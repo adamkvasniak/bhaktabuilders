@@ -1,0 +1,72 @@
+@import '../../assets/variables.scss';
+
+.footer {
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)),url("../../assets/images/team_india.jpg");
+    background-position:center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 20px 5vw;
+
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-small;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 90vw;
+    border-bottom: 1px solid white;
+    margin-top: 45px;
+    margin-bottom: 30px;
+  }
+
+  .logo {
+    height: 40px;
+    padding-bottom: 10PX;
+    
+  }
+  .activeLink {
+    color: $button-background
+  }
+  
+  .linksDiv {
+    display: flex;
+    
+  }
+  .navLinks, .socialLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: space-between;
+  }
+  .socialLinks li {
+    font-size: 24px;
+  }
+  .navLinks li {
+  margin-bottom: 4px;
+  }
+  .imageLink{
+    height: 24px
+  }
+  
+  .link:hover {
+    color: #ff8c00;
+  }
+
+.author {
+    transition: color 0.3s ease;
+    transition: font-size 0.3s ease;
+    color: #FFFFFF;
+    &:hover {
+      color: #DAA520;
+      font-size: 1.2rem;
+    }
+}
+
+  

@@ -1,0 +1,33 @@
+@import '../../assets/variables.scss';
+
+.container {
+    border-radius: 8px;
+    background-color: $background-color;
+    text-align: center;
+  }
+  
+.title {
+  @include header-style;
+  text-align: left;
+}
+  
+  .benefitsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .benefitItem {
+    @include normal-font;
+    margin: 10px 0;
+    position: relative;
+   
+    text-align: left;
+    display: flex;
+    align-items: center;
+  
+    .icon {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+  }

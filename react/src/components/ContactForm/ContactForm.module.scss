@@ -1,0 +1,92 @@
+@import '../../assets/variables.scss';
+
+
+.container {
+    display: flex;
+    align-items: stretch; /* Ensures children have the same height */
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.imageContainer {
+    /* Allows the image container to take equal space as the form container */
+    display: flex;
+    align-items: center; /* Center image vertically if it's smaller */
+    justify-content: center; /* Center image horizontally */
+}
+  
+
+  
+.formContainer {
+    width: 50%;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: left;
+}
+  
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.subHeader {
+    @include sub-header;
+    margin-bottom: 0px;
+}
+  .header {
+    @include header-style;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.formDescription {
+    color: $button-color;
+    margin-top: 0px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+  
+.label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: $button-color;
+}
+  
+.input, .textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: transparent;
+    border-radius: 14px;
+    font-size: 16px;
+    color: $button-color;
+}
+  
+.textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+
+.button {
+    @include button;
+    align-self: flex-start;
+}  
+
+@media (max-width:900px) {
+    .container {
+      flex-direction: column;
+    }
+    .formContainer {
+        width: 90%;
+        padding: 40px;
+        text-align: left;
+    }
+
+}
+  
+ 
+  

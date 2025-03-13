@@ -1,0 +1,80 @@
+// colors
+$font-color: white;
+$background-color:linear-gradient(135deg, #1A1A1A 0%, #292929 100%);
+
+// button colors
+$button-color:#FFFFFF ;
+$button-background: #952319;
+$button-font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+
+// Typography
+$font-size-small: 1rem;
+$font-size-normal: clamp(0.9rem, 1.1vw, 1.5rem);
+$font-size-large: clamp(2rem, 5vw, 5rem);
+
+$line-height: 1.2rem;
+
+// ServiceGrid
+$serviceCard-border: 1px solid #952319;
+$serviceCard-background:$button-background 20%;
+$serviceCard-color:#FFFFFF ;
+
+// Borders and Radius
+$radius-none: 0px;
+$radius-small: 4px;
+$radius-medium: 8px;
+$radius-large: 16px;
+$radius-full: 50%;
+
+
+
+@mixin bhaktaCredit {
+  color: $button-background;
+  font-weight: bold;
+}
+
+@mixin normal-font {
+  font-size:$font-size-normal;
+  color: $font-color;
+}
+
+@mixin header-style {
+  color:$font-color;
+  font-size: $font-size-large;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1px;
+  margin-top: 0px;
+}
+
+@mixin sub-header {
+  font-size: 1.2rem;
+  color: $button-background;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+@mixin button {
+  color: white;
+  background-color: #952319;
+  display: flex;
+  align-items: center;
+  
+  border: none;
+  font-size: $button-font-size;
+  font-weight: bold;
+  padding: 15px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  
+  transition: transform 0.2s ease, box-shadow 0.2s ease;  
+
+&:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 120, 255, 0.4);
+  text-decoration: none;
+  }
+  @media (max-width:700px) {
+    padding: 10px 12px;
+  }
+}
+

@@ -1,0 +1,107 @@
+@import '../../assets/variables.scss';
+
+.root {
+    background: $background-color;   
+    width: 100%;
+    overflow: hidden;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+
+}
+
+.pageHeader{
+    @include header-style;
+}
+.pageSubHeader{
+    @include sub-header;
+   padding-top: 200px;
+}
+.pageHeader, .pageSubHeader {
+    text-align: right;
+}
+.row {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start none;  
+}
+
+
+.textContainer { 
+    width: 33%;
+    border-radius: $radius-large;
+    position: relative;
+   
+    z-index: 10;
+    color: white;
+    text-align: center;
+    padding-top:300px;
+}
+.subHeader {
+    @include sub-header;
+}
+.header {
+    @include header-style;
+}
+.subHeader, .header {
+    text-align: left;
+}
+
+.textContainer p{
+    @include normal-font;
+    line-height: $line-height;
+    text-align: left;
+}
+.bhaktaCredit {
+    @include bhaktaCredit;
+}
+
+.paralaxDiv1{
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url("./working_photo.JPG");
+    background-attachment: fixed; 
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease-in-out;
+    overflow: hidden;
+}
+.paralaxDiv2{   
+    background: linear-gradient(to top,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("./india.jpg");
+    background-attachment: fixed; 
+    background-size: cover;
+    background-position: center;
+}
+
+.paralaxDiv3{
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./india_building.jpg");
+    background-attachment: fixed; 
+    background-size: cover;
+    background-position: center;
+}
+.paralaxDiv4{
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./india4.jpg");
+    background-attachment: fixed; 
+    background-size: cover;
+    background-position: center;
+}
+.paralaxDiv5{
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./india5.jpg");
+    background-attachment: fixed; 
+    background-size: cover;
+    background-position: center;
+}
+.paralaxDiv6{
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./india6.jpg");
+    background-attachment: fixed; 
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width:500px) {
+    .textContainer {
+        width: 80%;
+        padding-top: 80px;
+    }
+}

@@ -1,0 +1,41 @@
+@import '../../assets/variables.scss';
+
+.iconButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background:  $button-background;
+    border: none;
+    color: $button-color;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 30px;
+    border-radius: $radius-large;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .transparentButton {
+    background-color: transparent;
+    border: $button-background solid 1px;
+  }
+ 
+  .transparentButton a:hover {
+    text-decoration: none;
+  }
+
+  .iconButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 120, 255, 0.4);
+    
+  }
+  
+  .iconButton:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 120, 255, 0.2);
+  }
+  
+  .icon {
+    font-size: 20px;
+  }
+  

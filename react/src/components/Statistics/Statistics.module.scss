@@ -1,0 +1,147 @@
+@import '../../assets/variables.scss';
+
+.statisticContainer {
+    padding: 10vw;
+    //background: linear-gradient(180deg, rgb(15, 13, 13),#4f6671);
+    background: linear-gradient(135deg, #1A1A1A 0%, #292929 100%);
+    width: 80vw;
+}
+
+.textDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 111px;
+  text-align: left;
+}
+.descDiv{
+  width: 40%;
+  align-self: center;
+  line-height: 1.5rem;
+}
+.description {
+  @include normal-font;
+}
+.bhaktaCredit {
+  @include bhaktaCredit;
+}
+
+.button{
+  @include button;
+}
+.description a {
+  font-weight: bold;
+}
+.items{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto; 
+}
+
+.header {
+  @include header-style;
+  margin-bottom: 0px;
+  text-align: left;
+} 
+.subHeader{
+  @include sub-header;
+  text-align: left;
+}
+
+  
+.statisticItem  {
+  text-align: center;
+  background: linear-gradient(135deg, #1A1A1A 0%, #752015 100%);
+  border-radius:$radius-large;
+  margin: 20px;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  height: 130px;
+  top:-45px;
+  right:-8%;
+}
+.whichBadge {
+  border-radius: $radius-full;
+}
+.statisticItem h1 {
+  display: block;
+  @include header-style;
+  color: $font-color;
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+}
+.itemDescription {
+    @include normal-font;
+    margin-top: 19px;
+   
+    letter-spacing: 0.5px;
+    
+    text-align: center;
+
+    margin: 20px;
+    width: 150px;
+    padding: 7px 11px;
+    border-radius: 14px;
+
+   
+    color: $font-color;
+    border: $button-background 0.18rem solid;
+
+    font-family: "Bebas Neue", sans-serif;
+}
+ 
+// tablet
+ @media (max-width:1280px){
+  .statisticContainer {
+    padding: 5vw;
+    width: 90vw;
+  }
+  .textDiv {
+    margin-bottom: 128px;
+   
+  }
+  .badge {
+    position: absolute;
+    height: 130px;
+    top:-100px;
+    right:10px;
+  }
+  .statisticItem {
+    margin: 10px;
+  }
+  .statisticItem h1 {
+    margin-bottom: 10px;
+  }
+}
+
+// mobile 
+@media (max-width:800px) {
+  .textDiv{
+    flex-direction: column;
+    margin-bottom: 38px;
+  }
+  .items {
+  display: block;
+  }
+  .descDiv {
+    align-self: start;
+    width: 80%;
+  }
+  .statisticItem {
+    padding-top: 1px;
+    margin-bottom: 20px;
+  }
+  .statisticItem h1 {
+    margin-top: 0px;
+  }
+  .badge {
+    position: absolute;
+    height: 90px;
+    top:-10px;
+    right:-10px;
+  }
+}
