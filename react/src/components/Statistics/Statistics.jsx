@@ -57,8 +57,8 @@ const Statistic = () => {
         <a href={whichLink} target="_blank" rel="noopener"> Which? Trusted Trader</a>
           
         </p>
-        <Link to="/projects" className={styles.buttonLink}>
-          <button className={styles.button} type="button"> Visit the gallery </button>
+        <Link to="/projects" className={styles.button}>
+           Visit the gallery 
         </Link>   
         </div>
         

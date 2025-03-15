@@ -9,7 +9,7 @@ const categories = {
   Exteriors: ["garden_house.jpg"],
   Interiors: ["green_room1.jpg", "green_room2.jpg", "interior1.jpg", "interior2.jpg", "interior3.jpg"],
   Kitchen: ["kitchen1.jpg", "kitchen2.jpg", "kitchen3.jpg", "kitchen4.jpg", "kitchen5.jpg", "kitchen6.jpg", "kitchen7.jpg"],
-  Roof: ["roof1.jpg", "roof2.jpg", "roof3.jpg", "roof4.jpg", "roof5.jpg"]
+  Roof: ["roof1.jpg", "roof2.jpg", "roof3.jpg", "roof4.jpg", "roof5.JPG"]
 };
 
 const ProjectsWall = () => {

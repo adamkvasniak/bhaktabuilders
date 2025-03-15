@@ -26,7 +26,7 @@ const Form = () =>   {
 
       const result = await response.json();
       if (result.success) {
-        alert("✅ Email sent successfully!");
+        alert("✅ Thank you for your response! We’ve received your message and will get back to you as soon as possible!");
       } else {
         alert("⚠️ Failed to send email.");
       }

@@ -58,7 +58,7 @@
   color: $button-color;
   font-weight: 550;
   font-size: $font-size-normal;
-  transition: color 0.6s ease, font-size 0.3s ease, opacity 0.5s ease; /* Smooth transition for color and size */
+  transition: color 0.4s ease,  opacity 0.5s ease; /* Smooth transition for color and size */
   opacity: 1; 
 }
 
@@ -67,18 +67,16 @@
   text-decoration: none;
   font-weight: 550;
   font-size: $button-font-size;
-  transition: color 0.6s ease, font-size 0.3s ease, opacity 0.5s ease; /* Smooth transition for color and size */
+  transition: color 0.6s ease, opacity 0.5s ease; /* Smooth transition for color and size */
   opacity: 1; 
   &:hover {
     text-decoration: none;
-    font-size: 24px;
   }
 }
 
 .link:hover {
   text-decoration: none;
   color: $button-background; /* Change text color */
-  font-size: 24px;
 }
 
 .image {
@@ -153,8 +151,8 @@
     }
     .button {
       position: absolute;
-      top: 92vh;
-      right: 7vw;
+      top: 85vh;
+      right: 5vw;
       padding: 20px;
     }
 

@@ -54,27 +54,32 @@
   height: 2rem;
   transition: height 0.3 ease;
 }
-.socialLinks{
-    transition: font-size 0.3 ease;
-}
-.socialLinks li, .imageLink {
+
+.socialLinks li {
   font-size: 2rem;
   margin-bottom: 2px;
+  transition: color 0.3s ease;
 
   &:hover {
-    height: 2.5rem;
-    font-size: 2.5rem;
-    }
+    color: #FFD700; // Gold color on hover
+    animation: shake 0.3s ease-in-out;
   }
+}
 
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-1px); }
+  50% { transform: translateX(1px); }
+  75% { transform: translateX(-1px); }
+  100% { transform: translateX(0); }
+}
 
 .author {
     transition: color 0.3s ease;
-    transition: font-size 0.3s ease;
+    transition: color 0.3s ease;
     color: #FFFFFF;
     &:hover {
       color: #DAA520;
-      font-size: 1.2rem;
     }
 }
 

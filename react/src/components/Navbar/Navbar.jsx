@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { NavLink,Link,useLocation } from "react-router-dom";
 import styles from "./Navbar.module.scss";
 import logo from "./bhaktabuilders_logo_transparent.png";
-import IconButton from "../Buttons/IconButton";
 import { FaPhone } from "react-icons/fa";
 
 export const NavLinks = ({ className, onClick }) => {
@@ -35,12 +34,10 @@ const ToggleMenu = () => {
 };
 
 const Navbar = () => {
- 
-
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation(); // Get current path
   const [navClass, setNavClass] = useState(styles.navigationHeaderDiv);
-  console.log("Final Navbar Class:", document.querySelector("header")?.classList);
+  
   useEffect(() => {
     // Handle Scroll Effect
     const handleScroll = () => {
@@ -67,7 +64,7 @@ const Navbar = () => {
 
   return (
     <header className={`${navClass} ${isScrolled ? styles.shrink : navClass}`}>
-      <ul className={`${styles.navigationList}`}>
+      <ul className={styles.navigationList}>
         <li>
           <Link to="/">
             <img height="100px" src={logo} alt="BhaktaLogo" className={`${styles.logo} ${isScrolled ? styles.logoShrink : ""}`} />
