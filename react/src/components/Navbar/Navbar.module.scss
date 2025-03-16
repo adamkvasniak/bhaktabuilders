@@ -66,7 +66,6 @@
   color: #ffd700 ; // Highlight active page (Gold color)
   text-decoration: none;
   font-weight: 550;
-  font-size: $button-font-size;
   transition: color 0.6s ease, opacity 0.5s ease; /* Smooth transition for color and size */
   opacity: 1; 
   &:hover {
@@ -151,7 +150,7 @@
     }
     .button {
       position: absolute;
-      top: 85vh;
+      top: 90vh;
       right: 5vw;
       padding: 20px;
     }
