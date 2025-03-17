@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from './AboutSection.module.scss';
-import img from "./india2.jpg";
-import img2 from "./india3.jpg"
-import indiaBuilding from './india_building.jpg'
-import TeamBoard from '../TeamBoard/TeamBoard';
+
 
 const AboutSection = () => {
     const [overflowStyle, setOverflowStyle] = useState("auto");

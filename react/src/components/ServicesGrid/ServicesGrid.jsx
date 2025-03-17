@@ -13,6 +13,7 @@ import flooring from './flooring.jpg'
 import tilling from './tiling.jpeg'
 import basement from './basement.jpeg'
 import bathroom from './bathroom1.jpg'
+import moving from './moving.jpg'
 import { Link } from "react-router-dom";
 
 const services = [
@@ -24,7 +25,7 @@ const services = [
   { id: 6, title: "Carpentry", description: "Custom woodworking services.", img: carpentry },
   { id: 7, title: "Renovation", description: "Heating and cooling systems.", img: renovation },
   { id: 8, title: "Flooring", description: "Reliable roofing repair.", img: flooring },
-  { id: 9, title: "Moving", description: "Stress-free moving assistance.", img: plastering  },
+  { id: 9, title: "Moving", description: "Stress-free moving assistance.", img: moving  },
   { id: 10, title: "Basements", description: "Safe pest control services.", img: basement },
   { id: 11, title: "Bathrooms", description: "Modern home security systems.", img: bathroom  },
   { id: 12, title: "Renovation", description: "Home renovation experts.", img:plumbing },

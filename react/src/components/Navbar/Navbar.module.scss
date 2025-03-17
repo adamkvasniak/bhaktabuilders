@@ -55,27 +55,26 @@
 }
 .link {
   text-decoration: none;
-  color: $button-color;
   font-weight: 550;
   font-size: $font-size-normal;
-  transition: color 0.4s ease,  opacity 0.5s ease; /* Smooth transition for color and size */
-  opacity: 1; 
-}
+  transition: color 0.5s ease, opacity 0.5s ease; // Unified transition time
+  opacity: 1;
+  color: $button-color;
 
-.activeLink {
-  color: #ffd700 ; // Highlight active page (Gold color)
-  text-decoration: none;
-  font-weight: 550;
-  transition: color 0.6s ease, opacity 0.5s ease; /* Smooth transition for color and size */
-  opacity: 1; 
   &:hover {
+    color: $button-background; // Change text color on hover
     text-decoration: none;
   }
 }
 
-.link:hover {
-  text-decoration: none;
-  color: $button-background; /* Change text color */
+.activeLink {
+  @extend .link;
+  color: #ffd700; // Highlight active page (Gold color)
+  transition: color 0.6s ease; // Slightly different transition for active links
+
+  &:hover {
+    color: $font-color;
+  }
 }
 
 .image {
@@ -85,6 +84,7 @@
 .button {
   @include button;
   margin-left: 30px;
+  background: linear-gradient(135deg, #2E2E2E 0%, #B42E21 100%);
 }
 .menuButton {
     display: none; /* Only show on mobile */
@@ -151,7 +151,7 @@
     .button {
       position: absolute;
       top: 90vh;
-      right: 5vw;
+      left: 5vw;
       padding: 20px;
     }
 

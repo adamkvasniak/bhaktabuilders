@@ -2,10 +2,11 @@
 
 .footer {
     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)),url("../../assets/images/team_india.jpg");
+    background-size: cover; /* Ensures the background covers the entire div */
     background-position:center;
-    background-repeat: no-repeat;
+    background-repeat:no-repeat;
     color: #fff;
-    padding: 20px 5vw;
+    width:100vw;
 
     
     display: flex;
