@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
+const axios = require("axios");
 const cors = require("cors");
-const nodemailer = require("nodemailer");
 
 const app = express();
 
@@ -13,43 +13,33 @@ app.use(cors({
 
 app.use(express.json());
 
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
 
-app.post("/send-email", async (req, res) => {  
-  const { name, email, message, honeypot } = req.body;
+const ELASTIC_API_KEY = process.env.ELASTIC_EMAIL_API_KEY;
+const ELASTIC_FROM_EMAIL = process.env.ELASTIC_FROM_EMAIL;
 
-  // ✅ Honeypot Check (Reject Bots)
-  if (honeypot) {
-    console.warn("🛑 Spam bot detected! Request blocked.");
-    return res.status(400).json({ success: false, message: "Spam detected!" });
-  }
-
-
-
-  const mailOptions = {
-    from: email,
-    to: "adam.kvassniak@gmail.com",
-    subject: `New Contact Form: ${name}`,
-    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+app.post("/send-email", async (req, res) => {
+  const { name, email, message } = req.body;
+  const data = {
+      apikey: ELASTIC_API_KEY,
+      subject: `New Contact Form Submission from ${name}`,
+      from: ELASTIC_FROM_EMAIL,
+      to: "adamkvassniak@gmail.com", // Replace with your email
+      bodyText: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      isTransactional: true,
   };
 
   try {
-    await transporter.sendMail(mailOptions);
-    res.json({ success: true, message: "✅ Thank you for your response! We've received your message and will get back to you as soon as possible" });
+      const response = await axios.post("https://api.elasticemail.com/v2/email/send", null, { params: data });
+      console.log("✅ Email sent:", response.data);
+      res.json({ success: true, message: "Email sent successfully!" });
   } catch (error) {
-    console.error("❌ Email Sending Error:", error);
-    res.status(500).json({ success: false, message: "Error sending email" });
+      console.error("❌ Email Sending Error:", error.response?.data || error.message);
+      res.status(500).json({ success: false, error: "Failed to send email" });
   }
 });
 
-const PORT = process.env.PORT;
 
+const PORT = process.env.PORT;
 console.log("Starting server...");
 console.log("Using email:", process.env.EMAIL_USER);
 console.log("Listening on port:", PORT);

@@ -7,7 +7,7 @@ import styles from './Statistics.module.scss';
 import { FaHeart } from 'react-icons/fa'
 import { FaRegStar } from "react-icons/fa";
 
-import whichBadge from "../../assets/images/WhichTrustedTraders.png"
+import whichBadge from "../../assets/images/WhichTrustedTraders.svg"
 import googleBadge from '../../assets/images/google-review-badge.webp'
 import nextdoorBadge from '../../assets/images/transparent_neighborhood_fave.png'
 
@@ -79,29 +79,34 @@ const Statistic = () => {
     
    
     <div className={styles.items}>
+      <a href={googleLink} target="_blank" rel="noopener noreferrer">
         <div ref={ref} className={styles.statisticItem}>
             <p class={styles.itemDescription}>Google reviews</p>
-            <a href={googleLink} target="_blank" rel="noopener noreferrer">
+            
               <img src={googleBadge} className={styles.badge} alt="Google Reviews Badge" />
-            </a>
+           
           {inView && <h1><CountUp start={1} end={5.0} decimals={1}duration={2.5} delay={0.9} />/5.0 <FaRegStar /> </h1>}
-        </div>
+        </div> </a>
 
+
+        <a href={whichLink} target="_blank" rel="noopener noreferrer">
         <div className={styles.statisticItem}> 
           <p className={styles.itemDescription}>Rating on Which</p>
-          <a href={whichLink} target="_blank" rel="noopener noreferrer">
+          
           <img src={whichBadge} className={`${styles.badge} ${styles.whichBadge}`} alt="Which? Trusted Trader Badge" />
-          </a>
+         
           {inView && <h1><CountUp start={0.0} end={4.9} decimals={1} duration={2.5} delay={0.9} />/5 <FaRegStar /> </h1>}
-        </div>
+        </div> </a>
 
+
+       <a href={nextdoorLink} target="_blank" rel="noopener noreferrer">
         <div className={styles.statisticItem}>
           <p className={styles.itemDescription}>Nextdoor</p> 
-          <a href={nextdoorLink} target="_blank" rel="noopener noreferrer">
+          
             <img src={nextdoorBadge} className={styles.badge} alt="Nextdoor Favorite Badge" />
-          </a>  
+           
           {inView && <h1><CountUp start={1} end={44} duration={2.5} delay={0.9} /> <FaHeart color='red'/></h1>}
-        </div>
+        </div> </a>
 
     </div>
     <Testimonials />
