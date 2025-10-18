@@ -45,6 +45,7 @@
 }
 .header {
     @include header-style;
+    color: #fff;
 }
 .subHeader, .header {
     text-align: left;
@@ -54,6 +55,7 @@
     @include normal-font;
     line-height: $line-height;
     text-align: left;
+    color: #fff;
 }
 .bhaktaCredit {
     @include bhaktaCredit;
@@ -81,19 +83,19 @@
     background-position: center;
 }
 .paralaxDiv4{
-    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./india4.jpg");
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url("./india4.jpg");
     background-attachment: fixed; 
     background-size: cover;
     background-position: center;
 }
 .paralaxDiv5{
-    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./india5.jpg");
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url("./india5.jpg");
     background-attachment: fixed; 
     background-size: cover;
     background-position: center;
 }
 .paralaxDiv6{
-    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./india6.jpg");
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url("./india6.jpg");
     background-attachment: fixed; 
     background-size: cover;
     background-position: center;

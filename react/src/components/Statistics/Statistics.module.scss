@@ -3,7 +3,7 @@
 .statisticContainer {
     padding:5vw 10vw;
     //background: linear-gradient(180deg, rgb(15, 13, 13),#4f6671);
-    background: linear-gradient(135deg, #1A1A1A 0%, #292929 100%);
+    background: $background-color;
     width: 80vw;
 }
 
@@ -53,10 +53,11 @@
 
 .statisticItem  {
   text-align: center;
-  background: linear-gradient(135deg, #1A1A1A 0%, #752015 100%);
+  background: $background-color;
   border-radius:$radius-large;
   margin: 20px;
   position: relative;
+
 }
 
 .badge {

@@ -1,25 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { NavLink,Link,useLocation } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.scss";
 import logo from "./bhaktabuilders_logo_transparent.png";
 import { FaPhone } from "react-icons/fa";
 
-export const NavLinks = ({ className, onClick }) => {
-  return (
-    <ul className={className}>
-      <li><NavLink to="/" className={({ isActive }) => isActive ? styles.activeLink : styles.link} onClick={onClick}>Home</NavLink></li>
-      <li><NavLink to="/about" className={({ isActive }) => isActive ? styles.activeLink : styles.link} onClick={onClick}>About us</NavLink></li>
-      <li><NavLink to="/projects" className={({ isActive }) => isActive ? styles.activeLink : styles.link} onClick={onClick}>Projects</NavLink></li>
-      <li><NavLink to="/contact" className={({ isActive }) => isActive ? styles.activeLink : styles.link} onClick={onClick}>Contact</NavLink></li> 
-    </ul>
-  );
-};
+export const NavLinks = ({ className, onClick }) => (
+  <ul className={className}>
+    <li><NavLink to="/" className={({ isActive }) => isActive ? styles.activeLink : styles.link} onClick={onClick}>Home</NavLink></li>
+    <li><NavLink to="/about" className={({ isActive }) => isActive ? styles.activeLink : styles.link} onClick={onClick}>About us</NavLink></li>
+    <li><NavLink to="/projects" className={({ isActive }) => isActive ? styles.activeLink : styles.link} onClick={onClick}>Projects</NavLink></li>
+    <li><NavLink to="/contact" className={({ isActive }) => isActive ? styles.activeLink : styles.link} onClick={onClick}>Contact</NavLink></li> 
+  </ul>
+);
 
 const ToggleMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-
-  const closeMenu = () => setIsOpen(false); // Function to close menu
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <div className={styles.toggleContainer}>
@@ -34,51 +30,49 @@ const ToggleMenu = () => {
 };
 
 const Navbar = () => {
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation(); // Get current path
-  const [navClass, setNavClass] = useState(styles.navigationHeaderDiv);
-  
+
   useEffect(() => {
-    // Handle Scroll Effect
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 40);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    // Update class based on route change
-    let newClass = styles.navigationHeaderDiv;
-    if (location.pathname === "/") {
-      newClass = `${styles.navigationHeaderDiv} ${styles.homePageStyle}`;
-    } else if (location.pathname.includes("/about")) {
-      newClass = `${styles.navigationHeaderDiv} ${styles.aboutPageStyle}`;
-    } else if (location.pathname.includes("/projects")) {
-      newClass = `${styles.navigationHeaderDiv} ${styles.projectsPageStyle}`;
-    }
-
-    console.log("Updated Navbar Class:", newClass); // Debugging
-    setNavClass(newClass);
-  }, [location.pathname]); // Trigger effect when URL changes
+  // Determine navbar class based on route
+  const getNavbarClass = () => {
+    if (location.pathname === "/") return `${styles.navigationHeaderDiv} ${styles.homePageStyle}`;
+    if (location.pathname.startsWith("/about")) return `${styles.navigationHeaderDiv} ${styles.aboutPageStyle}`;
+    if (location.pathname.startsWith("/projects")) return `${styles.navigationHeaderDiv} ${styles.projectsPageStyle}`;
+    if (location.pathname.startsWith("/contact")) return `${styles.navigationHeaderDiv} ${styles.contactPageStyle}`;
+    return styles.navigationHeaderDiv;
+  };
 
   return (
-    <header className={`${navClass} ${isScrolled ? styles.shrink : navClass}`}>
+    <header className={`${getNavbarClass()} ${isScrolled ? styles.shrink : ""}`}>
       <ul className={styles.navigationList}>
         <li>
           <Link to="/">
-            <img height="100px" src={logo} alt="BhaktaLogo" className={`${styles.logo} ${isScrolled ? styles.logoShrink : ""}`} />
+            <img
+              src={logo}
+              alt="Bhakta Logo"
+              height="100px"
+              className={`${styles.logo} ${isScrolled ? styles.logoShrink : ""}`}
+            />
           </Link>
         </li>
         <NavLinks className={styles.navbarNavLinks} />
-        <button className={styles.button} onClick={() => window.location.href = `tel:${"+44 7729 167039"}`} type="button">
-          <FaPhone size={'35px'}/>  
+        <button
+          className={styles.button}
+          onClick={() => (window.location.href = `tel:+447729167039`)}
+          type="button"
+        >
+          <FaPhone size={"35px"} />  
         </button>
         <li><ToggleMenu /></li>
       </ul>
     </header>
   );
 };
-  
 
 export default Navbar;

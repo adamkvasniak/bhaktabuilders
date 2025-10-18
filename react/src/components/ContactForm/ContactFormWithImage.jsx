@@ -2,7 +2,8 @@
 import React from "react";
 import styles from "./ContactForm.module.scss";
 import Form from "./Form";
-import GoogleMapComponent from "../GoogleMapComponent/GoogleMapComponent";
+
+import CompanyMap from "../GoogleMapComponent/GoogleMapComponent";
 
 const ContactFormWithImage = () => {
 
@@ -10,7 +11,7 @@ const ContactFormWithImage = () => {
     <section className={styles.container} id='consultation'>
         <Form />
         <div className={styles.imageContainer}>
-          <GoogleMapComponent />
+          <CompanyMap />
          </div>
     </section>
   );

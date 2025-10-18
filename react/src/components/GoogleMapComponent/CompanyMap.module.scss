@@ -1,0 +1,62 @@
+@import '../../assets/variables.scss';
+.mapWrapper {
+  position: relative;
+
+}
+
+.map {
+  width: 700px;
+  height: 400px;
+  min-height: 400px;
+  display: block;
+  border-radius: $radius-full;
+}
+
+.popup {
+  background-color: $background-color;
+  padding: 6px 10px;
+  border-radius: 6px;
+
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: $font-color;
+}
+
+.copyText {
+  margin-right: 6px;
+}
+
+.copyIcon {
+  width: 16px;
+  height: 16px;
+  fill: #666;
+  transition: fill 0.2s;
+}
+
+.popup:hover .copyIcon {
+  fill: #000;
+}
+@media (max-width:1200px) {
+  .map {
+    width:600px;
+  }
+}
+
+@media (max-width:650px) {
+  .map {
+    width:500px;
+  }
+}
+
+@media (max-width:520px) {
+  .map {
+    width:400px;
+  }
+}
+
+@media (max-width:400px) {
+  .map {
+    width:300px;
+  }
+}

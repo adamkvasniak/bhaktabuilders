@@ -3,8 +3,9 @@
 .teamBoard {
     text-align: center;
     /* background: linear-gradient(90deg, rgba(53,238,118,0.8720379146919431) 0%, rgba(0,150,136,0.8625592417061612) 55%); */
-    background: linear-gradient(135deg, #292929 0%, #3B4C63 100%);
+    background: $background-color;
     padding: 40px 0px;
+    
   }
   
   .header {
@@ -61,7 +62,7 @@
   .name {
     font-size: 1.2rem;
     margin: 10px 0 2px;
-    color: $button-color;
+    color: $font-color;
   }
   
   .role {
@@ -74,7 +75,7 @@
 }
 
 .bio {
-    color: $button-color;
+    color: $font-color;
 }
 
 @media (max-width:1000px) {

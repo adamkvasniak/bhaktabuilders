@@ -5,7 +5,7 @@ import logo from '../../assets/images/bhaktabuilders_logo_transparent.png'
 const ContactCard = () => {
   return (
     <section className={styles.contactCard}>
-      <img className={styles.logo} src={logo}></img>
+      
         <p className={styles.detail}>
         <strong>Registered in England and Wales</strong>
         <br />

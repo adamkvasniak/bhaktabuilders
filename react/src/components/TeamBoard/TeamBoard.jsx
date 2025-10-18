@@ -10,9 +10,9 @@ import george from './george.jpg'
 
 const TeamBoard = () => {
   const teamMembers = [
-    { id: 1, name: "Vladimir", role: "Co-Founder / CEO",bio:"Leads company strategy and operations with 15+ years of experience in driving business growth and innovation.", image: george, fb:"https://www.facebook.com/george.j.vanek"},
-    { id: 2, name: "George", role: "Co-Founder / CEO", bio:"Directs technical strategy and architecture, specializing in scalable systems and cloud infrastructure.",image: vladimir },
-    { id: 3, name: "Kiran", role: "IT",bio: "Leads brand strategy and digital marketing initiatives with expertise in market analysis and growth.", image: kiran, fb: "https://www.facebook.com/kiran.vanek" },
+    { id: 1, name: "George", role: "Co-Founder / CEO",bio:"Leads company strategy and operations with 15+ years of experience in driving business growth and innovation.", image: george, fb:"https://www.facebook.com/george.j.vanek"},
+    { id: 2, name: "Vladimir", role: "Co-Founder / CEO", bio:"Directs technical strategy and architecture, specializing in scalable systems and cloud infrastructure.",image: vladimir },
+    { id: 3, name: "Kiran", role: "IT",bio: "Leads digital marketing and IT resources.", image: kiran, fb: "https://www.facebook.com/kiran.vanek" },
     { id: 4, name: "Natasha", role: "Lead Engineer", bio:"Manages talent acquisition and development while fostering a strong workplace culture.", image: natasha },
     { id: 5, name: "Maros", role: "Interior Designer",bio:"Oversees business operations and strategic initiatives to drive organizational efficiency and growth.", image: maros },
 
@@ -38,7 +38,7 @@ const TeamBoard = () => {
             <p className={styles.role}>{member.role}</p> 
             <div className={styles.socialIcons}> 
               <a href={member.fb} target="_blank" rel="noopener noreferrer">
-              <FaFacebook color="white" size="1.3rem" />
+              <FaFacebook color="black" size="1.3rem" />
               </a>
 </div>
              

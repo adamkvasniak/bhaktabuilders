@@ -2,9 +2,9 @@
 
 .serviceGridDiv {
   //background: linear-gradient(180deg, #111111, #333333);
-  background: linear-gradient(135deg, #1A1A1A 0%, #243B55 100%);
+  background: $background-color;
   margin-top: 0;
-  padding:10vw;
+  padding:2vw 10vw;
 }
 .textDiv {
   display: flex;
