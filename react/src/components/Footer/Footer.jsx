@@ -20,10 +20,10 @@ const Footer = () => {
       <ContactFormWithImage />
       <div className={styles.row}>
         <div className={styles.addressDiv}> 
-          <img src={logo} className={styles.logo}></img>
+        
         </div>
         <div className={styles.linksDiv}>
-          <NavLinks className={styles.navLinks}/>
+          
           <ul className={styles.socialLinks}>
             <li><a href="https://www.instagram.com/bhaktabuilders/?fbclid=IwY2xjawI-pi1leHRuA2FlbQIxMAABHT50xFyjOiRx-PDjDX3wZ7VN3xmaKAbtQsukdZ-3o4Teyjk1HB1zrl9DLg_aem_B4oq6alqKY9Cg5t_rk6zAQ" target="_blank" rel="noopener noreferrer"><FaInstagram color='#E1306C ' /></a></li>
             <li><a href="https://www.facebook.com/profile.php?id=100039929243286" target="_blank" rel="noopener noreferrer"><FaFacebook color='#1877F2' /></a></li>

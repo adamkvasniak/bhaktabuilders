@@ -40,10 +40,11 @@
   .navLinks, .socialLinks {
   list-style: none;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-self: flex-start;
   justify-content: space-between;
   height: 100%;
+  gap: 1vw;
   }
 
   .navLinks li {
