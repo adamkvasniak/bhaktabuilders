@@ -62,13 +62,6 @@ const Navbar = () => {
           </Link>
         </li>
         <NavLinks className={styles.navbarNavLinks} />
-        <button
-          className={styles.button}
-          onClick={() => (window.location.href = `tel:+447729167039`)}
-          type="button"
-        >
-          <FaPhone size={"35px"} />  
-        </button>
         <li><ToggleMenu /></li>
       </ul>
     </header>
