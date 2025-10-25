@@ -118,7 +118,7 @@
 }
 
 .open {
-  max-height: 200px;
+  max-height: 300px;
   
 }
 
@@ -133,6 +133,45 @@
   
   padding: 8px 0;
   border-bottom: 1px solid #ddd;
+}
+
+.navLinks, .socialLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  gap: 1vw;
+  }
+
+  .navLinks li {
+  margin-bottom: 12px;
+  }
+
+
+.imageLink{
+  height: 2rem;
+  transition: height 0.3 ease;
+}
+
+.socialLink {
+  font-size: 2rem;
+  margin-bottom: 2px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #FFD700; // Gold color on hover
+    animation: shake 0.3s ease-in-out;
+  }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-1px); }
+  50% { transform: translateX(1px); }
+  75% { transform: translateX(-1px); }
+  100% { transform: translateX(0); }
 }
 
 .popupMenu li:last-child {
@@ -173,6 +212,12 @@
       margin-left: 0; /* Add spacing between the grouped items if desired */
     }
     
+    .socialLinks {
+      flex-direction: column;
 
+
+    }
+    
+    
   }
   

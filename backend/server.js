@@ -41,9 +41,9 @@ app.post("/send-email", emailLimiter, async (req, res) => {
 
   const data = {
     apikey: ELASTIC_API_KEY,
-    subject: `New Contact Form Submission from ${name}`,
+    subject: `New Contact from BHAKTA WEB, customer ${name}`,
     from: ELASTIC_FROM_EMAIL,
-    to: "adamkvassniak@gmail.com", // Replace with your email
+    to: "bhaktabuilders@gmail.com", // Replace with your email
     bodyText: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     isTransactional: true,
   };
