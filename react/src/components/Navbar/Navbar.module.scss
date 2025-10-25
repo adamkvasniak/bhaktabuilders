@@ -118,7 +118,7 @@
 }
 
 .open {
-  max-height: 300px;
+  max-height: 340px;
   
 }
 
@@ -135,30 +135,32 @@
   border-bottom: 1px solid #ddd;
 }
 
-.navLinks, .socialLinks {
+.navLinks, .socialLinksDiv {
   list-style: none;
   display: flex;
   flex-direction: row;
-  align-self: flex-start;
+  align-self: center;
   justify-content: space-between;
   height: 100%;
   gap: 1vw;
   }
 
-  .navLinks li {
-  margin-bottom: 12px;
-  }
+
 
 
 .imageLink{
   height: 2rem;
   transition: height 0.3 ease;
 }
+.socialLinksDiv {
+  margin-left: 2rem;
+}
 
 .socialLink {
   font-size: 2rem;
-  margin-bottom: 2px;
+  margin-bottom: px;
   transition: color 0.3s ease;
+  
 
   &:hover {
     color: #FFD700; // Gold color on hover
@@ -212,8 +214,8 @@
       margin-left: 0; /* Add spacing between the grouped items if desired */
     }
     
-    .socialLinks {
-      flex-direction: column;
+    .socialLinksDiv {
+      display: none;
 
 
     }

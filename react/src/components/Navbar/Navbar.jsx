@@ -13,9 +13,6 @@ export const NavLinks = ({ className, onClick }) => (
     <li><NavLink to="/about" className={({ isActive }) => isActive ? styles.activeLink : styles.link} onClick={onClick}>About us</NavLink></li>
     <li><NavLink to="/projects" className={({ isActive }) => isActive ? styles.activeLink : styles.link} onClick={onClick}>Projects</NavLink></li>
     <li><NavLink to="/contact" className={({ isActive }) => isActive ? styles.activeLink : styles.link} onClick={onClick}>Contact</NavLink></li> 
-    <li className={styles.socialLink}><a href="https://www.instagram.com/bhaktabuilders/?fbclid=IwY2xjawI-pi1leHRuA2FlbQIxMAABHT50xFyjOiRx-PDjDX3wZ7VN3xmaKAbtQsukdZ-3o4Teyjk1HB1zrl9DLg_aem_B4oq6alqKY9Cg5t_rk6zAQ" target="_blank" rel="noopener noreferrer"><FaInstagram color='#E1306C ' /></a></li>
-    <li className={styles.socialLink}><a href="https://www.facebook.com/profile.php?id=100039929243286" target="_blank" rel="noopener noreferrer"><FaFacebook color='#1877F2' /></a></li>
-    <li className={styles.socialLink}><a href="https://x.com/i/flow/login?redirect_after_login=%2FBhaktaLtd" target="_blank" rel="noopener noreferrer"><img src={x} alt="Example Link" className={styles.imageLink} /></a></li>
   </ul>
 );
 
@@ -30,6 +27,9 @@ const ToggleMenu = () => {
       </button>
       <div className={`${styles.popupMenu} ${isOpen ? styles.open : ""}`}>
         <NavLinks className={styles.toggleNavLinks} onClick={closeMenu} />
+        <li className={styles.socialLink}><a href="https://www.instagram.com/bhaktabuilders/?fbclid=IwY2xjawI-pi1leHRuA2FlbQIxMAABHT50xFyjOiRx-PDjDX3wZ7VN3xmaKAbtQsukdZ-3o4Teyjk1HB1zrl9DLg_aem_B4oq6alqKY9Cg5t_rk6zAQ" target="_blank" rel="noopener noreferrer"><FaInstagram color='#E1306C ' /></a></li>
+    <li className={styles.socialLink}><a href="https://www.facebook.com/profile.php?id=100039929243286" target="_blank" rel="noopener noreferrer"><FaFacebook color='#1877F2' /></a></li>
+    <li className={styles.socialLink}><a href="https://x.com/i/flow/login?redirect_after_login=%2FBhaktaLtd" target="_blank" rel="noopener noreferrer"><img src={x} alt="Example Link" className={styles.imageLink} /></a></li>
       </div>
     </div>
   );
@@ -68,7 +68,11 @@ const Navbar = () => {
           </Link>
         </li>
         <NavLinks className={styles.navbarNavLinks} />
-
+        <div className={styles.socialLinksDiv}>
+          <li className={styles.socialLink}><a href="https://www.instagram.com/bhaktabuilders/?fbclid=IwY2xjawI-pi1leHRuA2FlbQIxMAABHT50xFyjOiRx-PDjDX3wZ7VN3xmaKAbtQsukdZ-3o4Teyjk1HB1zrl9DLg_aem_B4oq6alqKY9Cg5t_rk6zAQ" target="_blank" rel="noopener noreferrer"><FaInstagram color='#E1306C ' /></a></li>
+    <li className={styles.socialLink}><a href="https://www.facebook.com/profile.php?id=100039929243286" target="_blank" rel="noopener noreferrer"><FaFacebook color='#1877F2' /></a></li>
+    <li className={styles.socialLink}><a href="https://x.com/i/flow/login?redirect_after_login=%2FBhaktaLtd" target="_blank" rel="noopener noreferrer"><img src={x} alt="Example Link" className={styles.imageLink} /></a></li>
+        </div>
         <li><ToggleMenu /></li>
       </ul>
     </header>
