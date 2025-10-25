@@ -6,9 +6,19 @@ const cors = require("cors");
 
 const app = express();
 
+const allowedOrigins = process.env.CORS_ORIGIN.split(",");
+
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN,
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true); // allow server-to-server or Postman
+
+      if (allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("CORS not allowed"));
+      }
+    },
     methods: "GET,POST",
     allowedHeaders: "Content-Type",
   })
